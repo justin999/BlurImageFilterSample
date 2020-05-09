@@ -55,7 +55,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="6J3-Hi-XiJ" kind="show" id="zvm-3x-RZh"/>
+                                            <segue destination="olr-dT-tXc" kind="show" id="aj5-rg-zkQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -112,23 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="124"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="CQ2-Ya-pJA">
-            <objects>
-                <viewController id="6J3-Hi-XiJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UHN-ad-chd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="mF4-jc-sBR"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="byC-sJ-uQG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CLA-dB-dBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1258" y="850"/>
+            <point key="canvasLocation" x="1258" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m4x-Zg-h4y">
@@ -147,6 +131,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqD-3R-QTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-494.20289855072468" y="113.83928571428571"/>
+        </scene>
+        <!--Metal View Controller-->
+        <scene sceneID="6LX-NJ-W35">
+            <objects>
+                <viewController id="olr-dT-tXc" customClass="MetalViewController" customModule="BlurImageFilterSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ms5-Bv-26w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coco_singing" translatesAutoresizingMaskIntoConstraints="NO" id="pT7-q2-M78">
+                                <rect key="frame" x="57" y="88" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="mNS-aD-3Gq"/>
+                                    <constraint firstAttribute="height" constant="300" id="oAo-FM-CZs"/>
+                                </constraints>
+                            </imageView>
+                            <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="HHy-sq-Ebl">
+                                <rect key="frame" x="57" y="388" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1jA-E3-zgh"/>
+                                    <constraint firstAttribute="height" constant="300" id="sUY-fG-Bix"/>
+                                </constraints>
+                            </mtkView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HHy-sq-Ebl" firstAttribute="top" secondItem="pT7-q2-M78" secondAttribute="bottom" id="0qI-vd-G8a"/>
+                            <constraint firstItem="pT7-q2-M78" firstAttribute="centerX" secondItem="1Wm-gZ-41Y" secondAttribute="centerX" id="6nx-6F-N6t"/>
+                            <constraint firstItem="HHy-sq-Ebl" firstAttribute="centerX" secondItem="1Wm-gZ-41Y" secondAttribute="centerX" id="PAr-4P-ldB"/>
+                            <constraint firstItem="pT7-q2-M78" firstAttribute="top" secondItem="1Wm-gZ-41Y" secondAttribute="top" id="kAh-DS-hnx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Wm-gZ-41Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8G7-pS-GB9"/>
+                    <connections>
+                        <outlet property="mtkView" destination="HHy-sq-Ebl" id="UJO-wm-eTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ott-uF-V0G" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="834"/>
         </scene>
     </scenes>
     <resources>
